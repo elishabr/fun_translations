@@ -1,13 +1,19 @@
 # frozen_string_literal: true
 
 module FunTranslations
-  class Translation # rubocop:disable Style/Documentation
-    attr_reader :original_text, :translated_text, :translation
+  class Translation
+    attr_reader :translated_text, :original_text, :translation, :audio, :speed, :tone
 
     def initialize(raw_translation)
+      if raw_translation.respond_to?(:key?) && raw_translation['translated'].key?('audio')
+        @audio = raw_translation['translated']['audio']
+      else
+        @translated_text = raw_translation['translated']
+      end
       @original_text = raw_translation['text']
-      @translated_text = raw_translation['translated']
       @translation = raw_translation['translation']
+      @speed = raw_translation['speed']
+      @tone = raw_translation['tone']
     end
   end
 end

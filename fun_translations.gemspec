@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ['kirgizovn@gmail.com']
   spec.summary = ''
   spec.description = ''
-  spec.homepage = 'https://github.com/elishabr/ruby_project_one.git'
+  spec.homepage = 'https://github.com/elishabr/fun_translations.git'
   spec.license = 'MIT'
   spec.platform = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.7.0' # rubocop:disable Gemspec/RequiredRubyVersion

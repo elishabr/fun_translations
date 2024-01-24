@@ -7,8 +7,8 @@ require 'zeitwerk'
 loader = Zeitwerk::Loader.for_gem
 loader.setup
 
-module FunTranslations # rubocop:disable Style/Documentation
-  def self.client
-    FunTranslations::Client.new
+module FunTranslations
+  def self.client(token = nil)
+    FunTranslations::Client.new token
   end
 end
