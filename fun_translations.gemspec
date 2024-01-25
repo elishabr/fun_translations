@@ -23,10 +23,21 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday', '~> 2.6'
   spec.add_dependency 'zeitwerk', '~> 2.4'
 
+  spec.add_development_dependency 'rspec', '~> 3.6'
+  spec.add_development_dependency 'rubocop', '~> 1.6'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.5'
+  spec.add_development_dependency 'rubocop-rspec', '~> 2.0'
+  spec.add_development_dependency 'simplecov', '~> 0.16'
+  spec.add_development_dependency 'webmock', '~> 3.14'
+
   spec.metadata = {
     'rubygems_mfa_required' => 'true'
   }
 end
+
+# gem update --system
+# bundle install
+# bundle u
 
 # для сборки
 # gem build fun_translations.gemspec
